@@ -1,0 +1,26 @@
+{
+  "title": "zx config",
+  "rules": [
+    {
+      "description": "Use right_command+;/' to cycle through running applications (like command+tab).",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "caps_lock",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_control"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

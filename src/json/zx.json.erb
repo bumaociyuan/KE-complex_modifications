@@ -1,0 +1,15 @@
+{
+    "title": "zx config",
+    "rules": [
+        {
+            "description": "Swap caps_lock to left_control",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": <%= from("caps_lock", [], ["any"]) %>,
+                    "to": <%= to([["left_control"]]) %>
+              }
+            ]
+        }
+    ]
+}
