@@ -1,15 +1,26 @@
 {
-    "title": "zx config",
-    "rules": [
+  "title": "zx config",
+  "rules": [
+    {
+      "description": "Swap caps_lock to left_control",
+      "manipulators": [
         {
-            "description": "Swap caps_lock to left_control",
-            "manipulators": [
-                {
-                    "type": "basic",
-                    "from": <%= from("caps_lock", [], ["any"]) %>,
-                    "to": <%= to([["left_control"]]) %>
-              }
-            ]
+          "type": "basic",
+          "from": <%= from("caps_lock", [], ["any"]) %>,
+          "to": <%= to([["left_control"]]) %>
+      }
+      ]
+    },
+    {
+      "description": "Change ctrl+c to esc in chrome and sublime",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": <%= from("c", ["left_control"], []) %>,
+          "to": <%= to([["escape"]]) %>,
+          "conditions": [ <%= frontmost_application_unless("emacs_key_bindings_exception") %> ]
         }
-    ]
+      ]
+    }
+  ]
 }
