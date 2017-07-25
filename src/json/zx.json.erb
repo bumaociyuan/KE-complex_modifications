@@ -72,6 +72,13 @@
         "from": <%= from("p", ["control"], ["caps_lock", "shift", "option"]) %>,
         "to": <%= to([["up_arrow"]]) %>,
         "conditions": [ <%= frontmost_application_unless("emacs_key_bindings_exception") %> ]
+      },
+      {
+        "description": "Change chrome unfocus link address textfield",
+        "type": "basic",
+        "from": <%= from("period", ["control"], ["caps_lock","shift","option"]) %>,
+        "to": <%= to([["r", ["command"]], ["period", ["command"]]]) %>,
+        "conditions": [ <%= frontmost_application_unless("emacs_key_bindings_exception") %> ]
       }
       ]
     }
