@@ -2,24 +2,77 @@
   "title": "zx config",
   "rules": [
     {
-      "description": "Swap caps_lock to left_control",
+      "description": "zx key bindings",
       "manipulators": [
         {
+          "description": "remap caps_lock to ctrl",
           "type": "basic",
           "from": <%= from("caps_lock", [], ["any"]) %>,
           "to": <%= to([["left_control"]]) %>
+      },
+      {
+        "description": "control+d",
+        "type": "basic",
+        "from": <%= from("d", ["control"], ["caps_lock", "option"]) %>,
+        "to": <%= to([["delete_forward"]]) %>,
+        "conditions": [ <%= frontmost_application_unless("emacs_key_bindings_exception") %> ]
+      },
+      {
+        "description": "Change control+w to option+delete",
+        "type": "basic",
+        "from": <%= from("w", ["control"], ["caps_lock"]) %>,
+        "to": <%= to([["delete_or_backspace", ["left_option"]]]) %>,
+        "conditions": [ <%= frontmost_application_unless("emacs_key_bindings_exception") %> ]
+      },
+      {
+        "description": "Change control+u to delete-to-beginning-of-line",
+        "type": "basic",
+        "from": <%= from("u", ["control"], ["caps_lock"]) %>,
+        "to": <%= to([["delete_or_backspace", ["command"]]]) %>,
+        "conditions": [ <%= frontmost_application_unless("emacs_key_bindings_exception") %> ]
+      },
+      {
+        "type": "basic",
+        "from": <%= from("h", ["control"], ["caps_lock", "option"]) %>,
+        "to": <%= to([["delete_or_backspace"]]) %>,
+        "conditions": [ <%= frontmost_application_unless("emacs_key_bindings_exception") %> ]
+      },
+      {
+        "type": "basic",
+        "from": <%= from("c", ["control"], ["caps_lock"]) %>,
+        "to": <%= to([["escape"]]) %>,
+        "conditions": [ <%= frontmost_application_unless("emacs_key_bindings_exception") %> ]
+      },
+      {
+        "type": "basic",
+        "from": <%= from("j", ["control"], ["caps_lock", "shift", "option"]) %>,
+        "to": <%= to([["return_or_enter"]]) %>,
+        "conditions": [ <%= frontmost_application_unless("emacs_key_bindings_exception") %> ]
+      },
+      {
+        "type": "basic",
+        "from": <%= from("b", ["control"], ["caps_lock", "shift", "option"]) %>,
+        "to": <%= to([["left_arrow"]]) %>,
+        "conditions": [ <%= frontmost_application_unless("emacs_key_bindings_exception") %> ]
+      },
+      {
+        "type": "basic",
+        "from": <%= from("f", ["control"], ["caps_lock", "shift", "option"]) %>,
+        "to": <%= to([["right_arrow"]]) %>,
+        "conditions": [ <%= frontmost_application_unless("emacs_key_bindings_exception") %> ]
+      },
+      {
+        "type": "basic",
+        "from": <%= from("n", ["control"], ["caps_lock", "shift", "option"]) %>,
+        "to": <%= to([["down_arrow"]]) %>,
+        "conditions": [ <%= frontmost_application_unless("emacs_key_bindings_exception") %> ]
+      },
+      {
+        "type": "basic",
+        "from": <%= from("p", ["control"], ["caps_lock", "shift", "option"]) %>,
+        "to": <%= to([["up_arrow"]]) %>,
+        "conditions": [ <%= frontmost_application_unless("emacs_key_bindings_exception") %> ]
       }
-      ]
-    },
-    {
-      "description": "Change ctrl+c to esc in chrome and sublime",
-      "manipulators": [
-        {
-          "type": "basic",
-          "from": <%= from("c", ["left_control"], []) %>,
-          "to": <%= to([["escape"]]) %>,
-          "conditions": [ <%= frontmost_application_unless("emacs_key_bindings_exception") %> ]
-        }
       ]
     }
   ]
