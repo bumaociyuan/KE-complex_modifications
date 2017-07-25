@@ -79,6 +79,13 @@
         "from": <%= from("period", ["control"], ["caps_lock","shift","option"]) %>,
         "to": <%= to([["r", ["command"]], ["period", ["command"]]]) %>,
         "conditions": [ <%= frontmost_application_unless("emacs_key_bindings_exception") %> ]
+      },
+      {
+        "description": "Change command+esc to command+`",
+        "type": "basic",
+        "from": <%= from("escape", ["command"], []) %>,
+        "to": <%= to([["delete_or_backspace", ["command"]]]) %>,
+        "to": <%= to([["grave_accent_and_tilde", ["command"]]]) %>
       }
       ]
     }

@@ -702,6 +702,26 @@
               ]
             }
           ]
+        },
+        {
+          "description": "Change command+esc to command+`",
+          "type": "basic",
+          "from": {
+            "key_code": "escape",
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "grave_accent_and_tilde",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ]
         }
       ]
     }
