@@ -78,7 +78,14 @@
         "type": "basic",
         "from": <%= from("period", ["control"], ["caps_lock","shift","option"]) %>,
         "to": <%= to([["r", ["command"]], ["period", ["command"]]]) %>,
-        "conditions": [ <%= frontmost_application_unless("emacs_key_bindings_exception") %> ]
+         "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com.google.Chrome$"
+              ]
+            }
+          ]
       },
       {
         "description": "Change command+esc to command+`",
