@@ -22,6 +22,27 @@
           ]
         },
         {
+          "type": "basic",
+          "from": {
+            "key_code": "left_control",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_control"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "caps_lock"
+            }
+          ]
+        },
+        {
           "description": "control+d",
           "type": "basic",
           "from": {
@@ -628,45 +649,6 @@
                 "^com\\.apple\\.x11$",
                 "^org\\.macosforge\\.xquartz\\.X11$",
                 "^org\\.macports\\.X11$"
-              ]
-            }
-          ]
-        },
-        {
-          "description": "Change chrome unfocus link address textfield",
-          "type": "basic",
-          "from": {
-            "key_code": "period",
-            "modifiers": {
-              "mandatory": [
-                "control"
-              ],
-              "optional": [
-                "caps_lock",
-                "shift",
-                "option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "r",
-              "modifiers": [
-                "command"
-              ]
-            },
-            {
-              "key_code": "period",
-              "modifiers": [
-                "command"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com.google.Chrome$"
               ]
             }
           ]

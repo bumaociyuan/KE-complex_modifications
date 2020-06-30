@@ -11,6 +11,28 @@
           "to": <%= to([["left_control"]]) %>
       },
       {
+        "description": "单击左capslock ctrl 切换中英文",
+        "type": "basic",
+        "from": {
+          "key_code": "left_control",
+          "modifiers": {
+            "optional": [
+              "any"
+              ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "left_control"
+          }
+        ],
+        "to_if_alone": [
+          {
+            "key_code": "caps_lock"
+          }
+        ]
+      },
+      {
         "description": "control+d",
         "type": "basic",
         "from": <%= from("d", ["control"], ["caps_lock", "option"]) %>,
@@ -74,26 +96,12 @@
         "conditions": [ <%= frontmost_application_unless("emacs_key_bindings_exception") %> ]
       },
       {
-        "description": "Change chrome unfocus link address textfield",
-        "type": "basic",
-        "from": <%= from("period", ["control"], ["caps_lock","shift","option"]) %>,
-        "to": <%= to([["r", ["command"]], ["period", ["command"]]]) %>,
-         "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com.google.Chrome$"
-              ]
-            }
-          ]
-      },
-      {
         "description": "Change command+esc to command+`",
         "type": "basic",
         "from": <%= from("escape", ["command"], []) %>,
         "to": <%= to([["delete_or_backspace", ["command"]]]) %>,
         "to": <%= to([["grave_accent_and_tilde", ["command"]]]) %>
-      }
+    }
       ]
     }
   ]
