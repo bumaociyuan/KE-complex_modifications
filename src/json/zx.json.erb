@@ -10,28 +10,28 @@
           "from": <%= from("caps_lock", [], ["any"]) %>,
           "to": <%= to([["left_control"]]) %>
       },
-      {
-        "description": "单击左capslock ctrl 切换中英文",
-        "type": "basic",
-        "from": {
-          "key_code": "left_control",
-          "modifiers": {
-            "optional": [
-              "any"
-              ]
-          }
-        },
-        "to": [
-          {
-            "key_code": "left_control"
-          }
-        ],
-        "to_if_alone": [
-          {
-            "key_code": "caps_lock"
-          }
-        ]
-      },
+      <%# { %>
+      <%#   "description": "单击左capslock ctrl 切换中英文", %>
+      <%#   "type": "basic", %>
+      <%#   "from": { %>
+      <%#     "key_code": "left_control", %>
+      <%#     "modifiers": { %>
+      <%#       "optional": [ %>
+      <%#         "any" %>
+      <%#         ] %>
+      <%#     } %>
+      <%#   }, %>
+      <%#   "to": [ %>
+      <%#     { %>
+      <%#       "key_code": "left_control" %>
+      <%#     } %>
+      <%#   ], %>
+      <%#   "to_if_alone": [ %>
+      <%#     { %>
+      <%#       "key_code": "caps_lock" %>
+      <%#     } %>
+      <%#   ] %>
+      <%# }, %>
       {
         "description": "control+d",
         "type": "basic",
