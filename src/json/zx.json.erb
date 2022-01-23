@@ -96,6 +96,30 @@
         "conditions": [ <%= frontmost_application_unless("emacs_key_bindings_exception") %> ]
       },
       {
+        "description": "Brightness up",
+        "type": "basic",
+        "from": <%= from("2", ["fn"], ["caps_lock", "option"]) %>,
+        "to": <%= to([["display_brightness_increment"]]) %>
+      },
+      {
+        "description": "Brightness down",
+        "type": "basic",
+        "from": <%= from("1", ["fn"], ["caps_lock", "option"]) %>,
+        "to": <%= to([["display_brightness_decrement"]]) %>
+      },
+      {
+        "description": "volmue down",
+        "type": "basic",
+        "from": <%= from("a", ["fn"], ["caps_lock", "option"]) %>,
+        "to": <%= to([["volume_decrement"]]) %>
+      },
+      {
+        "description": "volmue up",
+        "type": "basic",
+        "from": <%= from("s", ["fn"], ["caps_lock", "option"]) %>,
+        "to": <%= to([["volume_increment"]]) %>
+      },
+      {
         "description": "Change command+esc to command+`",
         "type": "basic",
         "from": <%= from("escape", ["command"], []) %>,
