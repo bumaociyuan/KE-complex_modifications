@@ -2,7 +2,7 @@
   "title": "zx config",
   "rules": [
     {
-      "description": "zx key bindings",
+      "description": "ZX key bindings",
       "manipulators": [
         {
           "description": "remap caps_lock to ctrl",
@@ -10,9 +10,7 @@
           "from": {
             "key_code": "caps_lock",
             "modifiers": {
-              "optional": [
-                "any"
-              ]
+              "optional": ["any"]
             }
           },
           "to": [
@@ -27,13 +25,8 @@
           "from": {
             "key_code": "d",
             "modifiers": {
-              "mandatory": [
-                "control"
-              ],
-              "optional": [
-                "caps_lock",
-                "option"
-              ]
+              "mandatory": ["control"],
+              "optional": ["caps_lock", "option"]
             }
           },
           "to": [
@@ -88,20 +81,14 @@
           "from": {
             "key_code": "w",
             "modifiers": {
-              "mandatory": [
-                "control"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
+              "mandatory": ["control"],
+              "optional": ["caps_lock"]
             }
           },
           "to": [
             {
               "key_code": "delete_or_backspace",
-              "modifiers": [
-                "left_option"
-              ]
+              "modifiers": ["left_option"]
             }
           ],
           "conditions": [
@@ -151,20 +138,14 @@
           "from": {
             "key_code": "u",
             "modifiers": {
-              "mandatory": [
-                "control"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
+              "mandatory": ["control"],
+              "optional": ["caps_lock"]
             }
           },
           "to": [
             {
               "key_code": "delete_or_backspace",
-              "modifiers": [
-                "command"
-              ]
+              "modifiers": ["command"]
             }
           ],
           "conditions": [
@@ -213,13 +194,8 @@
           "from": {
             "key_code": "h",
             "modifiers": {
-              "mandatory": [
-                "control"
-              ],
-              "optional": [
-                "caps_lock",
-                "option"
-              ]
+              "mandatory": ["control"],
+              "optional": ["caps_lock", "option"]
             }
           },
           "to": [
@@ -273,12 +249,8 @@
           "from": {
             "key_code": "c",
             "modifiers": {
-              "mandatory": [
-                "control"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
+              "mandatory": ["control"],
+              "optional": ["caps_lock"]
             }
           },
           "to": [
@@ -332,14 +304,8 @@
           "from": {
             "key_code": "j",
             "modifiers": {
-              "mandatory": [
-                "control"
-              ],
-              "optional": [
-                "caps_lock",
-                "shift",
-                "option"
-              ]
+              "mandatory": ["control"],
+              "optional": ["caps_lock", "shift", "option"]
             }
           },
           "to": [
@@ -393,14 +359,8 @@
           "from": {
             "key_code": "b",
             "modifiers": {
-              "mandatory": [
-                "control"
-              ],
-              "optional": [
-                "caps_lock",
-                "shift",
-                "option"
-              ]
+              "mandatory": ["control"],
+              "optional": ["caps_lock", "shift", "option"]
             }
           },
           "to": [
@@ -454,14 +414,8 @@
           "from": {
             "key_code": "f",
             "modifiers": {
-              "mandatory": [
-                "control"
-              ],
-              "optional": [
-                "caps_lock",
-                "shift",
-                "option"
-              ]
+              "mandatory": ["control"],
+              "optional": ["caps_lock", "shift", "option"]
             }
           },
           "to": [
@@ -515,14 +469,8 @@
           "from": {
             "key_code": "n",
             "modifiers": {
-              "mandatory": [
-                "control"
-              ],
-              "optional": [
-                "caps_lock",
-                "shift",
-                "option"
-              ]
+              "mandatory": ["control"],
+              "optional": ["caps_lock", "shift", "option"]
             }
           },
           "to": [
@@ -576,14 +524,8 @@
           "from": {
             "key_code": "p",
             "modifiers": {
-              "mandatory": [
-                "control"
-              ],
-              "optional": [
-                "caps_lock",
-                "shift",
-                "option"
-              ]
+              "mandatory": ["control"],
+              "optional": ["caps_lock", "shift", "option"]
             }
           },
           "to": [
@@ -638,13 +580,8 @@
           "from": {
             "key_code": "2",
             "modifiers": {
-              "mandatory": [
-                "fn"
-              ],
-              "optional": [
-                "caps_lock",
-                "option"
-              ]
+              "mandatory": ["fn"],
+              "optional": ["caps_lock", "option"]
             }
           },
           "to": [
@@ -659,13 +596,8 @@
           "from": {
             "key_code": "1",
             "modifiers": {
-              "mandatory": [
-                "fn"
-              ],
-              "optional": [
-                "caps_lock",
-                "option"
-              ]
+              "mandatory": ["fn"],
+              "optional": ["caps_lock", "option"]
             }
           },
           "to": [
@@ -680,13 +612,8 @@
           "from": {
             "key_code": "a",
             "modifiers": {
-              "mandatory": [
-                "fn"
-              ],
-              "optional": [
-                "caps_lock",
-                "option"
-              ]
+              "mandatory": ["fn"],
+              "optional": ["caps_lock", "option"]
             }
           },
           "to": [
@@ -701,13 +628,8 @@
           "from": {
             "key_code": "s",
             "modifiers": {
-              "mandatory": [
-                "fn"
-              ],
-              "optional": [
-                "caps_lock",
-                "option"
-              ]
+              "mandatory": ["fn"],
+              "optional": ["caps_lock", "option"]
             }
           },
           "to": [
@@ -722,17 +644,96 @@
           "from": {
             "key_code": "escape",
             "modifiers": {
-              "mandatory": [
-                "command"
-              ]
+              "mandatory": ["command"]
             }
           },
           "to": [
             {
               "key_code": "grave_accent_and_tilde",
-              "modifiers": [
-                "command"
-              ]
+              "modifiers": ["command"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Dota2: Left Option to Command",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_option"
+          },
+          "to": [
+            {
+              "key_code": "left_command"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["^com.valvesoftware.dota2"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Dota2: Left Command to Option",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_command"
+          },
+          "to": [
+            {
+              "key_code": "left_option"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["^com.valvesoftware.dota2"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Dota2: Mouse btn4-> f11, btn5->f10",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "pointing_button": "button5"
+          },
+          "to": [
+            {
+              "key_code": "f10"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["^com.valvesoftware.dota2"]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "pointing_button": "button4"
+          },
+          "to": [
+            {
+              "key_code": "f11"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["^com.valvesoftware.dota2"]
             }
           ]
         }
